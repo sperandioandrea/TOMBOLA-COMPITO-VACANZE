@@ -109,7 +109,7 @@ namespace TOMBOLA_COMPITO_VACANZE
                     numeri.Add(num);
                     cartella2[i, j] = num;
 
-                    //sistemazione numeri nella prima casella
+                    //sistemazione numeri nella seconda casella
                     //colonna n.0
                     cartella2[0, 0] = random.Next(1, 9);
                     cartella2[1, 0] = random.Next(1, 9);
