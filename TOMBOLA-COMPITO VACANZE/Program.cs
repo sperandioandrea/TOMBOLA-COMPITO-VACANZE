@@ -158,7 +158,40 @@ namespace TOMBOLA_COMPITO_VACANZE
                 Console.WriteLine();
             }
 
+
+
+
+
+
+
+
+            //tabellone 
+            Console.WriteLine("- ");
+            Console.WriteLine(" TABELLONE ");
+            //dichiarazione tabellone
+            int[,] tabellone = new int[9, 10];
+
+            //stampa tabellone
+            StampaTabellone(tabellone); //semplificazione del codice con funzione
+
+
+
+
+
         }
         
+        //funzione per ottimizzare il codice
+        private static void StampaTabellone(int[,] tabellone)
+        {
+            //generazione tabellone aggiornato
+            for (int i = 0; i < 9; i++)
+            {
+                for (int j = 0; j < 10; j++)
+                {
+                    Console.Write(tabellone[i, j] + " ");
+                }
+                Console.WriteLine();
+            }
+        }
     }
 }
