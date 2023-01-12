@@ -268,8 +268,30 @@ namespace TOMBOLA_COMPITO_VACANZE
 
 
 
+
+
+
+            //segnalare il vincitore che ha fatto tombola
+
+            //controllo punteggio giocatore 1
+            if (contatoreCartella1 == 0)
+            {
+                Console.WriteLine("GIOCATORE 1 HA FATTO TOMBOLA!!!");
+            }
+
+            //controllo punteggio giocatore 1
+            if (contatoreCartella2 == 0)
+            {
+                Console.WriteLine("GIOCATORE 2 HA FATTO TOMBOLA!!!");
+            }
+
+
         }
         
+
+
+
+
 
             //funzione per ottimizzare il codice
             private static void StampaTabellone(int[,] tabellone)
