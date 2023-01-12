@@ -233,6 +233,37 @@ namespace TOMBOLA_COMPITO_VACANZE
 
 
 
+
+
+
+
+
+                //controllo numeri delle cartelle 
+
+                //controllo numeri della cartella1
+                for (int j = 0; j < 3; j++)
+                {
+                    for (int i = 0; i < 9; i++)
+                    {
+                        if (cartella1[j, i] == numeriRandom)
+                            contatoreCartella1--;
+                    }
+                }
+
+                //controllo numeri della cartella2
+                for (int j = 0; j < 3; j++)
+                {
+                    for (int i = 0; i < 9; i++)
+                    {
+                        if (cartella2[j, i] == numeriRandom)
+                            contatoreCartella2--;
+                    }
+                }
+
+                // Stampa numeri rimanenti per far tombola
+                Console.WriteLine("Numeri mancanti primo giocatore : " + contatoreCartella1);
+                Console.WriteLine("Numeri mancanti secondo giocatore : " + contatoreCartella2);
+
             }
 
 
