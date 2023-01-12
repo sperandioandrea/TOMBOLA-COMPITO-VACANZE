@@ -10,6 +10,11 @@ namespace TOMBOLA_COMPITO_VACANZE
     {
         static void Main(string[] args)
         {
+            //TITOLO 
+            //posizionare il titolo in alto e al centro
+            Console.Clear();
+            Console.SetCursorPosition((Console.WindowWidth - "IL GIOCO DELLA TOMBOLA PER 2 GIOCATORI".Length) / 2, 0);
+            Console.WriteLine("IL GIOCO DELLA TOMBOLA PER 2 GIOCATORI");
         }
     }
 }
