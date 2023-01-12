@@ -178,20 +178,82 @@ namespace TOMBOLA_COMPITO_VACANZE
 
 
 
+
+
+
+            //2 estrazione numeri
+            Console.WriteLine("- ");
+            Console.WriteLine("ESTRAZIONE NUMERI TOMBOLA");
+
+            // Creazione di una lista per memorizzare i numeri estratti
+            List<int> numeriEstratti = new List<int>();
+
+            //dichiarazione variabili numeri tabellone
+            int riga = 0;
+            int colonna = 0;
+
+            //dichiarazioni numeri per controllo cartelle
+            int contatoreCartella1 = 15;
+            int contatoreCartella2 = 15;
+
+            while (contatoreCartella1 > 0 && contatoreCartella2 > 0)
+            {
+                // Aspetta che l'utente prema il tasto Invio
+                Console.ReadLine();
+
+                // Genera un numero casuale compreso tra 1 e 90
+                int numeriRandom = random.Next(1, 91);
+
+                // Verifica se il numero è già stato estratto
+                if (numeriEstratti.Contains(numeriRandom))
+                {
+                    // Se il numero è già stato estratto, genera un altro numero
+                    continue;
+                }
+
+                // Se il numero non è stato ancora estratto, lo aggiunge alla lista
+                numeriEstratti.Add(numeriRandom);
+
+
+
+
+
+
+
+                // inserimento numero nel tabellone
+                //3 mostrare il tabellone aggiornato
+                tabellone[riga, colonna] = numeriRandom;
+                colonna++;
+                if (colonna == 10)
+                {
+                    colonna = 0;
+                    riga++;
+                }
+                StampaTabellone(tabellone); //semplifica codice
+
+
+
+            }
+
+
+
         }
         
-        //funzione per ottimizzare il codice
-        private static void StampaTabellone(int[,] tabellone)
-        {
-            //generazione tabellone aggiornato
-            for (int i = 0; i < 9; i++)
+
+            //funzione per ottimizzare il codice
+            private static void StampaTabellone(int[,] tabellone)
             {
-                for (int j = 0; j < 10; j++)
+                //generazione tabellone aggiornato
+                for (int i = 0; i < 9; i++)
                 {
-                    Console.Write(tabellone[i, j] + " ");
+                    for (int j = 0; j < 10; j++)
+                    {
+                        Console.Write(tabellone[i, j] + " ");
+                    }
+                    Console.WriteLine();
                 }
-                Console.WriteLine();
             }
-        }
+        
     }
 }
+
